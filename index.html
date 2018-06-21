@@ -19,15 +19,15 @@ body { background-color: #fafafa; font-family: 'Open Sans'; }
 		<h1>Status streamu dla Scanmed - wizualizacja postęp na milesonach</h1>
 		<br/><br/>
 			<h3>Status dla streamu: MigracjaDC</h3>
-			<div class="milestones" id="MigracjaDC"></div><br>
+			<div class="milestones" id="MigracjaDC"></div><br><br>
 			<h5>Status: STOPPED, oczekuje na wyznaczenie Business Owners przez Scanmed</h5>
 			<br><br>
 			<h3>Status dla streamu: Procure2Pay</h3>
-			<div class="milestones" id="P2P"></div><br>
+			<div class="milestones" id="P2P"></div><br><br>
 			<h5>Status: IN PROGRESS, trwa przygotowanie dokumentacji procesu P2P przez BSF</h5>
 			<br><br>
 			<h3>Status dla streamu: Integracja</h3>
-			<div class="milestones" id="Integracja"></div><br>
+			<div class="milestones" id="Integracja"></div><br><br>
 			<h5>Status: IN PROGRESS, wewnętrzna walidacja RFP na ESB</h5>
 		</div>
 
@@ -39,21 +39,23 @@ body { background-color: #fafafa; font-family: 'Open Sans'; }
 				$('#MigracjaDC').milestones({
 					stage: 4,
 					checks: 3,
-					
 					stageclass: 'doneclass',
-					labels: ["Recognition","Analiza ryzyk","Scanriusze testowe","Business Owner","Testy migracji","Migracja GoLive","Support"]
+					labels: ["Recognition","Analiza ryzyk","Scanariusze testowe","Business Owner","Testy migracji","GoLive","Support"],
+					secondline: ["","","27.06","2.07","3.07","12.07","31.07","15.08","31.08"]
 				});
 				$('#P2P').milestones({
 					stage: 4,
 					checks: 3,
 					stageclass: 'doneclass',
-					labels: ["Recognition","Koncepcja","Akceptacja","Dokumentacja","Kontaktowanie","Implementacja","Testy","P2P GoLive","Support"]
+					labels: ["Recognition","Koncepcja","Akceptacja","Dokumentacja","Kontaktowanie","Implementacja","Testy","GoLive","Support"],
+					secondline: ["","","27.06","2.07","3.07","12.07","31.07","15.08","31.08"]
 				});
 				$('#Integracja').milestones({
 					stage: 3,
 					checks: 2,
 					stageclass: 'doneclass',
-					labels: ["Recognition","Architektura","RFP","Przetarg","Kontraktowanie","Implementacja","Testy","Integracja GoLive","Support"]
+					labels: ["Recognition","Architektura","RFP","Przetarg","Kontraktowanie","Implementacja","Testy","GoLive","Support"],
+					secondline: ["","","27.06","2.07","3.07","12.07","31.07","15.08","31.08"]
 				});
 			});
 		</script>

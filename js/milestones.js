@@ -30,6 +30,7 @@
 			var stage = ($(this).data('stage') != undefined ? $(this).data('stage')-1 : settings.stage-1);
 			var checks = ($(this).data('checks') != undefined ? $(this).data('checks')-1 : settings.checks-1);
 			var checkclass = ($(this).data('checkclass') != undefined ? $(this).data('checkclass') : settings.checkclass);
+			var secondline = ($(this).data('secondline') != undefined ? $(this).data('secondline') : settings.secondline);
 
 			/*--------------------------
 			Set variables based on globals
@@ -59,15 +60,15 @@
 				}
 				if (x == 0){
 					$("#"+id+" .stage").append('<span class="tick first'+cls+'">'+icon+'</span>');
-					$("#"+id+" .labels").append('<label class="tick-label first"><span>'+labels[x]+'</span></label>');
+					$("#"+id+" .labels").append('<label class="tick-label first"><span>'+labels[x]+'</span><br/>'+secondline[x]+'</label>');
 				}else if (x == div){
 					$("#"+id+" .stage").append('<span class="tick last'+cls+'">'+icon+'</span>');
-					$("#"+id+" .labels").append('<label class="tick-label last"><span>'+labels[x]+'</span></label>');
+					$("#"+id+" .labels").append('<label class="tick-label last"><span>'+labels[x]+'</span><br/>'+secondline[x]+'</label>');
 				}else{
 					var n = labels[x].length/5;
 					var llft = (per*x)-n;
 					$("#"+id+" .stage").append('<span class="tick'+cls+'" style="left:'+lft+'%">'+icon+'</span>');
-					$("#"+id+" .labels").append('<label class="tick-label" style="left:'+llft+'%"><span>'+labels[x]+'</span></label>');
+					$("#"+id+" .labels").append('<label class="tick-label" style="left:'+llft+'%"><span>'+labels[x]+'</span><br/>'+secondline[x]+'</label>');
 				}
 			}
 		});
