@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Status projektów dla Scanmed</title>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.7/flatly/bootstrap.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="css/milestones.css">
+		<link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+		<style>
+body { background-color: #fafafa; font-family: 'Open Sans'; }
+.container { margin-top: 15px; }
+		</style>
+	</head>
+	<body>
+		<div class="container">
+		<h1>Status streamu dla Scanmed - wizualizacja postęp na milesonach</h1>
+		<br/><br/>
+			<h3>Status dla streamu: MigracjaDC</h3>
+			<div class="milestones" id="MigracjaDC"></div><br>
+			<h5>Status: STOPPED, oczekuje na wyznaczenie Business Owners przez Scanmed</h5>
+			<br><br>
+			<h3>Status dla streamu: Procure2Pay</h3>
+			<div class="milestones" id="P2P"></div><br>
+			<h5>Status: IN PROGRESS, trwa przygotowanie dokumentacji procesu P2P przez BSF</h5>
+			<br><br>
+			<h3>Status dla streamu: Integracja</h3>
+			<div class="milestones" id="Integracja"></div><br>
+			<h5>Status: IN PROGRESS, wewnętrzna walidacja RFP na ESB</h5>
+		</div>
+
+		<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+		<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/milestones.js"></script>
+		<script>
+			$(function(){
+				$('#MigracjaDC').milestones({
+					stage: 4,
+					checks: 3,
+					
+					stageclass: 'doneclass',
+					labels: ["Recognition","Analiza ryzyk","Scanriusze testowe","Business Owner","Testy migracji","Migracja GoLive","Support"]
+				});
+				$('#P2P').milestones({
+					stage: 4,
+					checks: 3,
+					stageclass: 'doneclass',
+					labels: ["Recognition","Koncepcja","Akceptacja","Dokumentacja","Kontaktowanie","Implementacja","Testy","P2P GoLive","Support"]
+				});
+				$('#Integracja').milestones({
+					stage: 3,
+					checks: 2,
+					stageclass: 'doneclass',
+					labels: ["Recognition","Architektura","RFP","Przetarg","Kontraktowanie","Implementacja","Testy","Integracja GoLive","Support"]
+				});
+			});
+		</script>
+	</body>
+</html>
