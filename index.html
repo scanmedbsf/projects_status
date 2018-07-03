@@ -20,7 +20,7 @@ body { background-color: #fafafa; font-family: 'Open Sans'; }
 		<br/><br/>
 			<h3>Status dla streamu: MigracjaDC</h3>
 			<div class="milestones" id="MigracjaDC"></div><br><br>
-			<h5>Status: STOPPED, oczekuje na wyznaczenie Business Owners przez Scanmed</h5>
+			<h5>Status: IN PROGRESS, przekazano do pierwszego Business Owner'a scenariusze testowe</h5>
 			<br><br>
 			<h3>Status dla streamu: Procure2Pay</h3>
 			<div class="milestones" id="P2P"></div><br><br>
@@ -37,11 +37,11 @@ body { background-color: #fafafa; font-family: 'Open Sans'; }
 		<script>
 			$(function(){
 				$('#MigracjaDC').milestones({
-					stage: 4,
-					checks: 3,
+					stage: 5,
+					checks: 4,
 					stageclass: 'doneclass',
 					labels: ["Recognition","Analiza ryzyk","Scanariusze testowe","Business Owner","Testy migracji","GoLive","Support"],
-					secondline: ["","","","","","","",""]
+					secondline: ["","","","","","","",""] 
 				});
 				$('#P2P').milestones({
 					stage: 4,
